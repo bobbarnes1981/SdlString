@@ -97,7 +97,7 @@ namespace StringArt
         public void Run(int videoWidth, int videoHeight)
         {
             _circle = new Circle(300, 300, 250);
-            _chart = new Chart(500, 500, 300, 200);
+            _chart = new Chart(550, 200, 500, 500);
 
             _width = videoWidth;
             _height = videoHeight;

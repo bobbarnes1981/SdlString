@@ -15,7 +15,7 @@ namespace StringArt
         private int _width;
         private int _height;
 
-        private int count = 10;
+        private int _count = 10;
 
         private Point[] _points;
 
@@ -26,18 +26,18 @@ namespace StringArt
             _width = width;
             _height = height;
 
-            _points = new Point[((_width) + (_height)) / count];
+            _points = new Point[((_width) + (_height)) / _count];
 
             int counter = 0;
-            for (int y2 = 0; y2 < _height / count; y2++)
+            for (int y2 = 0; y2 < _height / _count; y2++)
             {
-                _points[counter] = new Point(_x, _y + (y2 * count));
+                _points[counter] = new Point(_x, _y + (y2 * _count));
                 counter++;
             }
 
-            for (int x2 = 0; x2 < _width / count; x2++)
+            for (int x2 = 0; x2 < _width / _count; x2++)
             {
-                _points[counter] = new Point(_x + (x2 * count), _y);
+                _points[counter] = new Point(_x + (x2 * _count), _y + (_height));
                 counter++;
             }
 
@@ -47,8 +47,8 @@ namespace StringArt
         {
             SDL.SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 
-            int offset = 30;
-            for (int i = 0; i < _height / count; i++)
+            int offset = _height / _count;
+            for (int i = 0; i < _height / _count; i++)
             {
                 var l1 = _points[i];
                 var j = i + offset;
