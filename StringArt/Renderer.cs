@@ -106,7 +106,7 @@ namespace StringArt
 
             SDL.SDL_SetRenderDrawColor(_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 
-            int offset = 10;
+            int offset = 20;
             for (int i = 0; i < _points.Length; i++)
             {
                 var l1 = _points[i];
@@ -160,7 +160,7 @@ namespace StringArt
 
         public void Run(int videoWidth, int videoHeight)
         {
-            int count = 10;
+            int count = 5;
             int radius = 195;
             int x = 300;
             int y = 300;
